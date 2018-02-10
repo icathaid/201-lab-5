@@ -79,13 +79,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
-// TODO: Write your code here
+// TODO: DONE
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) { //eslint-disable-line
   var test1 = sum(testArray[0], testArray[1]);
   var test2 = sum(test1[0], testArray[2]);
-    return ['Good morning', testArray + ' was passed in as an array of numbers, and ' + test2[0] + ' is their sum.'];
+    return [test2[0], testArray + ' was passed in as an array of numbers, and ' + test2[0] + ' is their sum.'];
   } 
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
@@ -104,11 +104,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray) { //eslint-disable-line
 
+function multiplyArray(a, b, c) {
+  var test3 = multiply(testArray[0], testArray[1])[0];
+  var test4 = multiply(testArray[2], test3)[0];
+  return [test4, 'The numbers ' + testArray + ' have a product of ' + test4 + '.']
 }
+multiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
